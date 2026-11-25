@@ -1,3 +1,6 @@
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    record.startRecording(record.BlockingState.Blocking)
+})
 input.onButtonPressed(Button.A, function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.showNumber(3)
@@ -16,6 +19,9 @@ input.onButtonPressed(Button.A, function () {
     strip2.showColor(neopixel.colors(NeoPixelColors.Black))
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
     stip3.showColor(neopixel.colors(NeoPixelColors.Black))
+})
+input.onButtonPressed(Button.B, function () {
+    record.playAudio(record.BlockingState.Blocking)
 })
 let stip3: neopixel.Strip = null
 let strip2: neopixel.Strip = null
